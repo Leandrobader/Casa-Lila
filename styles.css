@@ -1,0 +1,898 @@
+
+/* =========================================
+   CASA LILA - ESTILOS GENERALES
+========================================= */
+
+/* VARIABLES DE COLOR */
+
+:root {
+    --lila: #8e779b;
+    --lila-oscuro: #705b7d;
+    --lila-claro: #e9dfea;
+
+    --crema: #f8f4ed;
+    --crema-oscuro: #eee5d9;
+
+    --marron: #51433f;
+    --marron-claro: #796b65;
+
+    --blanco: #ffffff;
+
+    --fuente-titulos: 'Playfair Display', serif;
+    --fuente-textos: 'DM Sans', sans-serif;
+
+    --transicion: all 0.3s ease;
+}
+
+
+/* =========================================
+   CONFIGURACION GENERAL
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 85px;
+}
+
+body {
+    font-family: var(--fuente-textos);
+    color: var(--marron);
+    background-color: var(--crema);
+    overflow-x: hidden;
+}
+
+/* LOGO CASA LILA */
+
+.navbar-brand {
+    padding: 0;
+}
+
+.logo-casa-lila {
+    width: 95px;
+    height: 65px;
+    object-fit: contain;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.section-padding {
+    padding: 100px 0;
+}
+
+.section-subtitle {
+    display: inline-block;
+    color: var(--lila-oscuro);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 18px;
+}
+
+.section-title {
+    font-family: var(--fuente-titulos);
+    font-size: clamp(2.2rem, 4vw, 3.3rem);
+    font-weight: 600;
+    color: var(--marron);
+    line-height: 1.2;
+    margin-bottom: 25px;
+}
+
+.section-title em {
+    color: var(--lila);
+    font-weight: 500;
+}
+
+.section-text {
+    color: var(--marron-claro);
+    font-size: 15px;
+    line-height: 1.9;
+    margin-bottom: 15px;
+}
+
+
+/* =========================================
+   BOTONES
+========================================= */
+
+.btn {
+    border-radius: 50px;
+    padding: 12px 25px;
+    font-family: var(--fuente-textos);
+    font-size: 14px;
+    font-weight: 600;
+    transition: var(--transicion);
+}
+
+.btn-lila {
+    background-color: var(--lila);
+    color: var(--blanco);
+    border: 1px solid var(--lila);
+}
+
+.btn-lila:hover {
+    background-color: var(--lila-oscuro);
+    border-color: var(--lila-oscuro);
+    color: var(--blanco);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(112, 91, 125, 0.2);
+}
+
+.btn-outline-lila {
+    color: var(--lila-oscuro);
+    border: 1px solid var(--lila);
+    background: transparent;
+}
+
+.btn-outline-lila:hover {
+    background-color: var(--lila);
+    color: var(--blanco);
+}
+
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+.navbar {
+    padding: 18px 0;
+    background-color: rgba(248, 244, 237, 0.97);
+    backdrop-filter: blur(10px);
+    transition: var(--transicion);
+    border-bottom: 1px solid rgba(142, 119, 155, 0.1);
+}
+
+.navbar-brand {
+    font-family: var(--fuente-titulos);
+    font-size: 27px;
+    font-weight: 600;
+    color: var(--marron) !important;
+    line-height: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar-brand span {
+    color: var(--lila);
+    font-style: italic;
+}
+
+.navbar-brand small {
+    font-family: var(--fuente-textos);
+    font-size: 9px;
+    letter-spacing: 5px;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.navbar-nav {
+    gap: 12px;
+}
+
+.nav-link {
+    color: var(--marron) !important;
+    font-size: 13px;
+    font-weight: 600;
+    transition: var(--transicion);
+}
+
+.nav-link:hover {
+    color: var(--lila) !important;
+}
+
+.navbar-toggler {
+    border: none;
+    box-shadow: none !important;
+}
+
+
+/* =========================================
+   HERO - PORTADA PRINCIPAL
+========================================= */
+
+.hero {
+    min-height: 720px;
+    height: 100vh;
+    max-height: 950px;
+
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    background-image: url('https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=2000&q=90');
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    color: var(--blanco);
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+        90deg,
+        rgba(37, 29, 32, 0.85) 0%,
+        rgba(37, 29, 32, 0.65) 50%,
+        rgba(37, 29, 32, 0.15) 100%
+    );
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    padding-top: 70px;
+}
+
+.hero-subtitle {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 4px;
+    color: #e5d5e9;
+    display: block;
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-family: var(--fuente-titulos);
+    font-size: clamp(3rem, 6vw, 5.5rem);
+    font-weight: 600;
+    line-height: 1.1;
+    max-width: 750px;
+    margin-bottom: 25px;
+}
+
+.hero h1 em {
+    display: block;
+    color: #dfcce6;
+    font-weight: 500;
+}
+
+.hero p {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.9);
+    max-width: 520px;
+    line-height: 1.8;
+    margin-bottom: 35px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.hero-scroll {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+.hero-scroll a {
+    color: var(--blanco);
+    font-size: 25px;
+    animation: flotar 2s infinite;
+    display: inline-block;
+}
+
+@keyframes flotar {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(8px);
+    }
+}
+
+
+/* =========================================
+   NOSOTROS
+========================================= */
+
+.about-image {
+    position: relative;
+    padding: 0 30px 30px 0;
+}
+
+.about-image::before {
+    content: "";
+    position: absolute;
+    width: 85%;
+    height: 85%;
+    bottom: 0;
+    right: 0;
+    background-color: var(--lila-claro);
+    border-radius: 5px;
+    z-index: 0;
+}
+
+.about-image img {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 470px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.about-badge {
+    position: absolute;
+    z-index: 2;
+    bottom: 0;
+    left: 0;
+
+    background-color: var(--lila);
+    color: var(--blanco);
+
+    padding: 20px 30px;
+    border-radius: 4px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.about-badge span {
+    font-size: 12px;
+}
+
+.about-badge strong {
+    font-family: var(--fuente-titulos);
+    font-size: 20px;
+    font-style: italic;
+}
+
+
+/* =========================================
+   ENCABEZADOS DE SECCION
+========================================= */
+
+.section-heading {
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+.section-heading p {
+    color: var(--marron-claro);
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   MENU / CARTA
+========================================= */
+
+.menu-section {
+    background-color: #f0e9e1;
+}
+
+.menu-card {
+    background-color: var(--blanco);
+    height: 100%;
+    border-radius: 6px;
+    overflow: hidden;
+    transition: var(--transicion);
+    box-shadow: 0 5px 20px rgba(81, 67, 63, 0.04);
+}
+
+
+.botones-carta {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.btn-carta {
+    background-color: #8b718e;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+
+.btn-carta:hover {
+    background-color: #705773;
+    color: white;
+}
+
+.btn-carta-outline {
+    border: 1px solid #8b718e;
+    color: #8b718e;
+    padding: 12px 25px;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+
+.btn-carta-outline:hover {
+    background-color: #8b718e;
+    color: white;
+}
+
+.menu-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(81, 67, 63, 0.12);
+}
+
+.menu-card-image {
+    height: 240px;
+    overflow: hidden;
+}
+
+.menu-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.menu-card:hover .menu-card-image img {
+    transform: scale(1.08);
+}
+
+.menu-card-content {
+    padding: 25px;
+}
+
+.menu-number {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--lila);
+    margin-bottom: 12px;
+}
+
+.menu-card h3 {
+    font-family: var(--fuente-titulos);
+    font-size: 23px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: var(--marron);
+
+    min-height: 58px;
+    display: flex;
+    align-items: center;
+}
+
+.menu-card p {
+    color: var(--marron-claro);
+    font-size: 13px;
+    line-height: 1.8;
+    min-height: 70px;
+}
+
+.menu-card a {
+    display: inline-block;
+    color: var(--lila-oscuro);
+    font-size: 13px;
+    font-weight: 700;
+    margin-top: 12px;
+    transition: var(--transicion);
+}
+
+.menu-card a:hover {
+    color: var(--marron);
+}
+
+.menu-card a i {
+    margin-left: 5px;
+    transition: var(--transicion);
+}
+
+.menu-card a:hover i {
+    margin-left: 10px;
+}
+
+
+/* =========================================
+   FRASE DESTACADA
+========================================= */
+
+.quote-section {
+    padding: 100px 20px;
+    background-color: var(--lila);
+    color: var(--blanco);
+}
+
+.quote-icon {
+    font-size: 45px;
+    color: #e8dce9;
+    display: block;
+    margin-bottom: 25px;
+}
+
+.quote-section h2 {
+    font-family: var(--fuente-titulos);
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    font-style: italic;
+    font-weight: 500;
+    max-width: 800px;
+    margin: 0 auto 25px;
+    line-height: 1.4;
+}
+
+.quote-section span {
+    font-size: 11px;
+    letter-spacing: 4px;
+    font-weight: 600;
+}
+
+
+/* =========================================
+   GALERIA
+========================================= */
+
+.gallery-grid img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 5px;
+    transition: var(--transicion);
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 10px 25px rgba(81, 67, 63, 0.15);
+}
+
+
+/* =========================================
+   CONTACTO
+========================================= */
+
+.contact-section {
+    background-color: #f0e9e1;
+}
+
+.contact-info {
+    margin-top: 30px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    margin-bottom: 25px;
+}
+
+.contact-item > i {
+    color: var(--lila);
+    font-size: 24px;
+    width: 30px;
+}
+
+.contact-item strong {
+    display: block;
+    font-size: 14px;
+    color: var(--marron);
+    margin-bottom: 5px;
+}
+
+.contact-item p {
+    color: var(--marron-claro);
+    font-size: 13px;
+    margin: 0;
+    line-height: 1.7;
+}
+
+.location-card {
+    background-color: var(--blanco);
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(81, 67, 63, 0.08);
+}
+
+.location-image img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.location-details {
+    padding: 30px;
+}
+
+.location-details h3 {
+    font-family: var(--fuente-titulos);
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+.location-details p {
+    color: var(--marron-claro);
+    font-size: 14px;
+}
+
+.location-details a {
+    color: var(--lila-oscuro);
+    font-size: 14px;
+    font-weight: 700;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.footer {
+    background-color: #44383c;
+    color: var(--blanco);
+    padding: 60px 0px 20px;
+}
+
+.footer-logo {
+    width: 110px;
+    height: auto;
+}
+
+.footer-brand {
+    font-family: var(--fuente-titulos);
+    font-size: 30px;
+    font-weight: 600;
+    color: var(--blanco);
+}
+
+.footer-brand span {
+    color: #d4bfdc;
+    font-style: italic;
+}
+
+.footer p {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 13px;
+    margin-top: 10px;
+}
+
+.footer-social a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 42px;
+    height: 42px;
+
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 50%;
+
+    color: var(--blanco);
+    font-size: 18px;
+
+    transition: var(--transicion);
+}
+
+.footer-social a:hover {
+    background-color: var(--lila);
+    border-color: var(--lila);
+    transform: translateY(-3px);
+}
+
+.footer hr {
+    border-color: rgba(255, 255, 255, 0.2);
+    margin: 35px 0 20px;
+}
+
+.footer-bottom p {
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
+.footer-bottom small {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 11px;
+}
+
+
+/* =========================================
+   RESPONSIVE - TABLETS
+========================================= */
+
+@media (max-width: 991px) {
+
+    .navbar-collapse {
+        background-color: var(--crema);
+        padding: 20px;
+        margin-top: 15px;
+        border-radius: 8px;
+        box-shadow: 0 10px 25px rgba(81, 67, 63, 0.1);
+    }
+
+    .navbar-nav {
+        align-items: flex-start !important;
+        gap: 8px;
+    }
+
+    .navbar-nav .nav-item {
+        width: 100%;
+    }
+
+    .navbar-nav .btn {
+        display: inline-block;
+        margin-top: 10px;
+    }
+
+    .hero {
+        min-height: 650px;
+    }
+
+    .about-image img {
+        height: 400px;
+    }
+
+    .menu-card-image {
+        height: 210px;
+    }
+
+    .menu-card p {
+        min-height: auto;
+    }
+
+}
+
+
+/* =========================================
+   RESPONSIVE - CELULARES
+========================================= */
+
+@media (max-width: 576px) {
+
+    .section-padding {
+        padding: 70px 0;
+    }
+
+    .navbar {
+        padding: 13px 0;
+    }
+
+    .navbar-brand {
+        font-size: 23px;
+    }
+
+    .hero {
+        min-height: 650px;
+        height: 90vh;
+        background-position: 60% center;
+    }
+
+    .hero-overlay {
+        background: linear-gradient(
+            90deg,
+            rgba(37, 29, 32, 0.85),
+            rgba(37, 29, 32, 0.55)
+        );
+    }
+
+    .hero-content {
+        padding-top: 50px;
+    }
+
+    .hero-subtitle {
+        font-size: 10px;
+        letter-spacing: 2px;
+    }
+
+    .hero h1 {
+        font-size: 3rem;
+    }
+
+    .hero p {
+        font-size: 14px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .hero-buttons .btn {
+        font-size: 13px;
+    }
+
+    .about-image {
+        padding: 0 15px 20px 0;
+    }
+
+    .about-image img {
+        height: 330px;
+    }
+
+    .about-badge {
+        padding: 14px 20px;
+    }
+
+    .about-badge strong {
+        font-size: 17px;
+    }
+
+    .section-title {
+        font-size: 2.3rem;
+    }
+
+    .section-subtitle {
+        font-size: 10px;
+        letter-spacing: 2px;
+    }
+
+    .menu-card-image {
+        height: 170px;
+    }
+
+    .menu-card-content {
+        padding: 17px;
+    }
+
+    .menu-card h3 {
+        font-size: 19px;
+        min-height: 48px;
+    }
+
+    .menu-card p {
+        font-size: 12px;
+    }
+
+    .menu-card a {
+        font-size: 12px;
+    }
+
+    .quote-section {
+        padding: 75px 20px;
+    }
+
+    .quote-section h2 {
+        font-size: 2rem;
+    }
+
+    .gallery-grid img {
+        height: 180px;
+    }
+
+    .location-image img {
+        height: 220px;
+    }
+
+    .location-details {
+        padding: 22px;
+    }
+
+    .footer {
+        padding: 45px 0 20px;
+    }
+
+}
+
+
+/* =========================================
+   ACCESIBILIDAD
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+}
